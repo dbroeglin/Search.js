@@ -48,6 +48,7 @@
                     <jsTestSrcDir>${project.basedir}/src/test/specs</jsTestSrcDir>
                     <srcDirectoryName>js</srcDirectoryName>
                     <specDirectoryName>specs</specDirectoryName>
+                    <serverPort>12346</serverPort>
                     <customRunnerConfiguration>${project.basedir}/src/test/resources/jasmineRequireJsConfig.txt</customRunnerConfiguration>
                     <sourceIncludes>
                         <include>**/*.js</include>
@@ -62,7 +63,9 @@
                 <artifactId>jstd-maven-plugin</artifactId>
                 <version>1.3.2.5</version>
                 <configuration>
-                    <reset>true</reset>
+                  <reset>true</reset>
+                  <port>12345</port>
+                  <browser>${browser.command}</browser>
                 </configuration>
                 <executions>
                     <execution>
